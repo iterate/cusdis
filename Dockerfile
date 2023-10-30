@@ -17,7 +17,7 @@ RUN npm install -g pnpm
 RUN yarn install --frozen-lockfile && npx browserslist@latest --update-db
 RUN npm run build:without-migrate
 
-FROM node:16-alpine3.15 as runner
+FROM node:18-alpine as runner
 
 ENV NODE_ENV=production
 ARG DB_TYPE=sqlite
