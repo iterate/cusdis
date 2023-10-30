@@ -19,6 +19,8 @@
 
   let theme = attrs.theme || 'light'
 
+  let customStyle = attrs['customStyle'] || '';
+
   const api = axios.create({
     baseURL: attrs.host,
   })
@@ -92,7 +94,7 @@
 </script>
 
 {#if !error}
-  <div class:dark={theme === 'dark'}>
+  <div class:dark={theme === 'dark'} style={customStyle}>
     {#if message}
       <div class="p-2 mb-4 bg-blue-500 text-white">
         {message}
@@ -128,7 +130,7 @@
 
     <div class="my-8" />
 
-    <div class="text-center text-gray-500 dark:text-gray-100 text-xs">
+    <div class="text-center text-gray-500 dark:text-gray-100 text-xs" id="powered_by">
       <a class="underline " href="https://cusdis.com">{t('powered_by')}</a>
     </div>
   </div>
