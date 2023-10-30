@@ -36,4 +36,7 @@ COPY . /app
 
 EXPOSE 3000/tcp
 
+#Check the Bash Installation
+RUN which bash
+
 CMD ["npm", "run", "start:with-migrate"]
