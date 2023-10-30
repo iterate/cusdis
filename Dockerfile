@@ -5,7 +5,7 @@ VOLUME [ "/data" ]
 ARG DB_TYPE=sqlite
 ENV DB_TYPE=$DB_TYPE
 
-RUN apk add --no-cache python3 py3-pip make gcc g++
+RUN apk add --no-cache python3 py3-pip make gcc g++ bash
 
 COPY . /app
 
@@ -13,8 +13,9 @@ COPY package.json yarn.lock /app/
 
 WORKDIR /app
 
+RUN echo $PATH
 RUN npm install -g pnpm
-RUN yarn install --frozen-lockfile && npx browserslist@latest --update-db
+RUN /bin/bash -c "yarn install --frozen-lockfile && npx browserslist@latest --update-db"
 RUN npm run build:without-migrate
 
 FROM node:18-alpine as runner
