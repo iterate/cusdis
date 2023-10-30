@@ -1,5 +1,5 @@
 port = 3000
-readiness_path = "/health"
+readiness_path = "/api/health"
 replicas = 4
 
 [env.common]
