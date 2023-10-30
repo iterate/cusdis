@@ -15,8 +15,8 @@ export const resolvedConfig = {
   isHosted: process.env.IS_HOSTED === 'true',
   host: process.env.HOST || 'https://cusdis.com',
   checkout: {
-    enabled: process.env.CHECKOUT_URL ? true : false,
-    url: process.env.CHECKOUT_URL as string,
+    enabled: false,
+    url: 'www.iterate.no',
     lemonSecret: process.env.LEMON_SECRET as string,
     lemonApiKey: process.env.LEMON_API_KEY as string,
   },

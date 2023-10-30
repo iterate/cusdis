@@ -1,5 +1,43 @@
-
 <p align="center"><a href="https://cusdis.com" target="_blank" rel="noopener noreferrer"><img width="100" src="/public/images/artworks/logo-256.png" alt="logo"></a></p>
+
+Start dev server
+Firstly, create a .env file:
+
+DB_URL=file:./db.sqlite
+USERNAME=admin
+PASSWORD=password
+JWT_SECRET=ofcourseistillloveyou
+
+(use bash, not zsh, or use npm)
+
+# install dependencies
+
+$ yarn
+
+# start dev server
+
+$ yarn dev
+Now open http://localhost:3000 and signin with admin and password
+
+# Using PostgreSQL
+
+yarn dev is using SQLite by default. If you want to develop with PostgreSQL, first change DB_URL in .env to your db connection url:
+
+# .env
+
+DB_URL=postgres://xxx
+...
+Then use yarn dev:pg to start the dev server.
+
+# Developing widget (use bash, not zsh, or use npm)
+
+$ yarn widget
+The widget demo will run on http://localhost:3001
+
+Change the attributes of the widget in widget/index.html (Don't commit this file if you only modify something for testing).
+
+Modify schema
+Database schema is defined in prisma/$DB_TYPE/schema.prisma.
 
 Cusdis is an open-source, lightweight (~5kb gzip), privacy-friendly alternative to Disqus.
 
