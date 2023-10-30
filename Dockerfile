@@ -20,6 +20,9 @@ RUN npm run build:without-migrate
 
 FROM node:18-alpine as runner
 
+# Install bash in the runner stage
+RUN apk add --no-cache bash
+
 ENV NODE_ENV=production
 ARG DB_TYPE=sqlite
 ENV DB_TYPE=$DB_TYPE
