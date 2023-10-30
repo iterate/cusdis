@@ -9,8 +9,8 @@ GOOGLE_SECRET={ encrypted = "gNDU7IE6QcFjcFiKwR8l8vF3cCjNyGHnZm61kix2D2buBAKh3bp
 JWT_SECRET={ encrypted = "bfkoKeXoHXHG-T1FmXBpA7chorsJ6V3JmUXk1wn4ng6ai-hLQNNizUZnLy8zqBcAA6_CNl4yL99DEw-WRHkB4kCJED-csRiYzNkDp_yVVNwy5zblZpzj" }
 DB_TYPE="sqlite"
 DB_URL="file:./data.db"
-LEMON_SECRET="{ encrypted = "EuiuRhG7dkgKm6VLIoyaxaKyd_GOqHuh2_HHYQqsWCi8DTAFeqIgwOYP_Nl2XtYMK1X6eUbByz6hudssw7Zmg7xAy8bYokXCbovW6eh6UExP" }"
-LEMON_API_KEY="{ encrypted = "EuiuRhG7dkgKm6VLIoyaxaKyd_GOqHuh2_HHYQqsWCi8DTAFeqIgwOYP_Nl2XtYMK1X6eUbByz6hudssw7Zmg7xAy8bYokXCbovW6eh6UExP" }"
+LEMON_SECRET={ encrypted = "EuiuRhG7dkgKm6VLIoyaxaKyd_GOqHuh2_HHYQqsWCi8DTAFeqIgwOYP_Nl2XtYMK1X6eUbByz6hudssw7Zmg7xAy8bYokXCbovW6eh6UExP" }
+LEMON_API_KEY={ encrypted = "EuiuRhG7dkgKm6VLIoyaxaKyd_GOqHuh2_HHYQqsWCi8DTAFeqIgwOYP_Nl2XtYMK1X6eUbByz6hudssw7Zmg7xAy8bYokXCbovW6eh6UExP" }
 
 [env.test]
 
