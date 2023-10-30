@@ -1,4 +1,4 @@
-FROM node:16-alpine3.15 as builder
+FROM node:18-alpine as builder
 
 VOLUME [ "/data" ]
 
