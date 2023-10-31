@@ -8,7 +8,6 @@
   export let isChild = false
 
   const { showIndicator } = getContext('attrs')
-
 </script>
 
 <div
@@ -19,22 +18,25 @@
   class:cusdis-indicator={showIndicator}
 >
   <div class="flex items-center">
-    <div class="mr-2 font-medium dark:text-gray-100">
+    <!-- <div class="mr-2 font-medium dark:text-gray-100">
       {comment.moderator && comment.moderator.displayName ? comment.moderator.displayName : comment.by_nickname}
-    </div>
+    </div> -->
 
     {#if comment.moderatorId}
-      <div class="mr-2 dark:bg-gray-500 bg-gray-200 text-xs py-0.5 px-1 rounded dark:text-gray-100">
+      <div class="mr-2 text-xs py-0.5 px-1 rounded dark:text-gray-100">
         <span>{t('mod_badge')}</span>
       </div>
     {/if}
   </div>
 
-  <div class="text-gray-500 text-sm dark:text-gray-400">
+  <!-- <div class="text-gray-500 text-sm dark:text-gray-400">
     {comment.parsedCreatedAt}
-  </div>
+  </div> -->
 
-  <div class="text-gray-500 my-2 dark:text-gray-200">
+  <div
+    class="text-2xl border p-4 rounded-xl"
+    style="background-color: #FAFAFA;color: #372040"
+  >
     {@html comment.parsedContent}
   </div>
 
@@ -44,7 +46,7 @@
     {/each}
   {/if}
 
-  <div>
+  <!-- <div>
     <button
       class="font-medium text-sm text-gray-500 dark:bg-transparent dark:text-gray-100"
       type="button"
@@ -52,8 +54,7 @@
         showReplyForm = !showReplyForm
       }}>{t('reply_btn')}</button
     >
-  </div>
-
+  </div> -->
 
   {#if showReplyForm}
     <div class="mt-4 pl-4 border-l-2 border-gray-200">
@@ -65,6 +66,4 @@
       />
     </div>
   {/if}
-
-
 </div>

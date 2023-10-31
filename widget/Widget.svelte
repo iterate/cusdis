@@ -19,7 +19,7 @@
 
   let theme = attrs.theme || 'light'
 
-  let customStyle = attrs['customStyle'] || '';
+  let customStyle = attrs['customStyle'] || ''
 
   const api = axios.create({
     baseURL: attrs.host,
@@ -34,7 +34,6 @@
   }
 
   onMount(() => {
-
     function onMessage(e) {
       try {
         const msg = JSON.parse(e.data)
@@ -90,24 +89,20 @@
   onMount(() => {
     getComments()
   })
-
 </script>
 
 {#if !error}
-  <div class:dark={theme === 'dark'} style={customStyle}>
+  <div class="mx-6 bg-transparent">
+    <!-- <div class:dark={theme === 'dark'} style={customStyle}> -->
     {#if message}
-      <div class="p-2 mb-4 bg-blue-500 text-white">
+      <div class="">
         {message}
       </div>
     {/if}
 
-    <Reply />
-
-    <div class="my-8" />
-
-    <div class="mt-4 px-1">
+    <div class="">
       {#if loadingComments}
-        <div class="text-gray-900 dark:text-gray-100">
+        <div class="">
           {t('loading')}...
         </div>
       {:else}
@@ -118,7 +113,7 @@
           <div>
             {#each Array(commentsResult.pageCount) as _, index}
               <button
-                class="px-2 py-1 text-sm mr-2 dark:text-gray-200"
+                class="px-2 py-1 text-sm mr-2"
                 class:underline={page === index + 1}
                 on:click={(_) => onClickPage(index + 1)}>{index + 1}</button
               >
@@ -128,10 +123,12 @@
       {/if}
     </div>
 
-    <div class="my-8" />
+    <Reply />
 
-    <div class="text-center text-gray-500 dark:text-gray-100 text-xs" id="powered_by">
+    <!-- <div class="my-8" /> -->
+
+    <!-- <div class="text-center text-gray-500 dark:text-gray-100 text-xs" id="powered_by">
       <a class="underline " href="https://cusdis.com">{t('powered_by')}</a>
-    </div>
+    </div> -->
   </div>
 {/if}

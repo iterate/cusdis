@@ -54,12 +54,11 @@
     email = ''
     onSuccess && onSuccess()
   }
-
 </script>
 
-<div class="grid grid-cols-1 gap-4">
-  <div class="grid grid-cols-2 gap-4">
-    <div class="px-1">
+<div class="grid grid-cols-1">
+  <div class="grid grid-cols-2">
+    <!-- <div class="px-1">
       <label class="mb-2 block dark:text-gray-200" for="nickname">{t('nickname')}</label>
       <input
         name="nickname"
@@ -68,8 +67,8 @@
         title={t('nickname')}
         bind:value={nickname}
       />
-    </div>
-    <div class="px-1">
+    </div> -->
+    <!-- <div class="px-1">
       <label class="mb-2 block dark:text-gray-200" for="email">{t('email')}</label>
       <input
         name="email"
@@ -78,23 +77,26 @@
         title={t('email')}
         bind:value={email}
       />
-    </div>
+    </div> -->
   </div>
 
-  <div class="px-1">
-    <label class="mb-2 block dark:text-gray-200" for="reply_content">{t('reply_placeholder')}</label>
+  <div class="">
+    <!-- <label class="mb-2 block dark:text-gray-200" for="reply_content"
+      >{t('reply_placeholder')}</label
+    > -->
     <textarea
+      placeholder={t('reply_placeholder')}
       name="reply_content"
-      class="w-full p-2 border border-gray-200 h-24 bg-transparent dark:text-gray-100 dark:outline-none"
-      title={t('reply_placeholder')}
+      style="color: #372040;"
+      class="text-2xl border p-4 rounded-xl w-full bg-white"
       bind:value={content}
     />
   </div>
 
-  <div class="px-1">
+  <div class="my-2">
     <button
-
-      class="text-sm bg-gray-200 p-2 px-4 font-bold dark:bg-transparent dark:border dark:border-gray-100"
+      style="border: 1px solid #372040;background: #FF7676;color: #372040;"
+      class="text-2xl border p-4 rounded-xl font-bold border-black w-full"
       class:cusdis-disabled={loading}
       on:click={addComment}>{loading ? t('sending') : t('post_comment')}</button
     >
@@ -164,5 +166,4 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   } */
-
 </style>
