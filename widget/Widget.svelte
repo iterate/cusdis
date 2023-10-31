@@ -94,11 +94,6 @@
 {#if !error}
   <div class="mx-6 bg-transparent">
     <!-- <div class:dark={theme === 'dark'} style={customStyle}> -->
-    {#if message}
-      <div class="">
-        {message}
-      </div>
-    {/if}
 
     <div class="">
       {#if loadingComments}
@@ -125,6 +120,11 @@
 
     <Reply />
 
+    {#if message}
+      <div class="text-white">
+        {message}
+      </div>
+    {/if}
     <!-- <div class="my-8" /> -->
 
     <!-- <div class="text-center text-gray-500 dark:text-gray-100 text-xs" id="powered_by">

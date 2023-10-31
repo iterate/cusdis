@@ -23,10 +23,10 @@
       return
     }
 
-    if (!nickname) {
-      alert(t('nickname_is_required'))
-      return
-    }
+    // if (!nickname) {
+    //   alert(t('nickname_is_required'))
+    //   return
+    // }
 
     try {
       loading = true
