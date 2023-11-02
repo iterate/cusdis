@@ -10,7 +10,7 @@ module.exports = {
   async headers() {
     return [
       {
-        source: "/js/*",
+        source: "/js/:filename*",
         headers: [
           {
             key: "Access-Control-Allow-Origin",
