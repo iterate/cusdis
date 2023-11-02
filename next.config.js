@@ -6,5 +6,18 @@ module.exports = {
         destination: '/doc/index.html'
       }
     ]
+  },
+  async headers() {
+    return [
+      {
+        source: "/js/:filename*",
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://wise-copywriter-025422.framer.app"
+          }
+        ]
+      }
+    ]
   }
 }
