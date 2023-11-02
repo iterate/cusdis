@@ -3,21 +3,21 @@ module.exports = {
     return [
       {
         source: '/doc',
-        destination: '/doc/index.html'
-      }
+        destination: '/doc/index.html',
+      },
     ]
   },
   async headers() {
     return [
       {
-        source: "/js/:filename*",
+        source: '/js/:filename*',
         headers: [
           {
-            key: "Access-Control-Allow-Origin",
-            value: "https://wise-copywriter-025422.framer.app"
-          }
-        ]
-      }
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
     ]
-  }
+  },
 }
