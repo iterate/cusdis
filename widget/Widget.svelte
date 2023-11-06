@@ -92,7 +92,7 @@
 </script>
 
 {#if !error}
-  <div class="mx-6 bg-transparent">
+  <div class="bg-transparent">
     <!-- <div class:dark={theme === 'dark'} style={customStyle}> -->
 
     <div class="">

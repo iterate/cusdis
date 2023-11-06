@@ -34,7 +34,7 @@
   </div> -->
 
   <div
-    class="text-2xl border p-4 rounded-xl"
+    class="text-2xl p-4 rounded-xl"
     style="background-color: #FAFAFA;color: #372040"
   >
     {@html comment.parsedContent}
