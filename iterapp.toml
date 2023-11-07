@@ -8,7 +8,7 @@ GOOGLE_ID={ encrypted = "tVwFPC0OADwjJKpRUOYjM4c3Vl7DB2brzwPK3RwoLD_NbVqsDhTLhti
 GOOGLE_SECRET={ encrypted = "gNDU7IE6QcFjcFiKwR8l8vF3cCjNyGHnZm61kix2D2buBAKh3bpv1CkOt0o1H5lF-4jS9m399v_JnTiSQ6Nq3vJT1cQJInihAyyqmh6GM3Xl8xj4xtJOEiwoDmfbbd4SVkVboWXlcSKfOHm2pmD1zbAsVfKncrwo" }
 JWT_SECRET={ encrypted = "bfkoKeXoHXHG-T1FmXBpA7chorsJ6V3JmUXk1wn4ng6ai-hLQNNizUZnLy8zqBcAA6_CNl4yL99DEw-WRHkB4kCJED-csRiYzNkDp_yVVNwy5zblZpzj" }
 DB_TYPE="pgsql"
-
+DB_URL="postgresql://postgres:postgres@localhost:5432/cusdis"
 LEMON_SECRET={ encrypted = "EuiuRhG7dkgKm6VLIoyaxaKyd_GOqHuh2_HHYQqsWCi8DTAFeqIgwOYP_Nl2XtYMK1X6eUbByz6hudssw7Zmg7xAy8bYokXCbovW6eh6UExP" }
 LEMON_API_KEY={ encrypted = "EuiuRhG7dkgKm6VLIoyaxaKyd_GOqHuh2_HHYQqsWCi8DTAFeqIgwOYP_Nl2XtYMK1X6eUbByz6hudssw7Zmg7xAy8bYokXCbovW6eh6UExP" }
 

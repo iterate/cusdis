@@ -3,7 +3,7 @@
 
 datasource db {
   provider = "postgresql"
-  url      = env("DB_URL")
+  url      = env("DATABASE_URL")
 }
 
 generator client {
@@ -173,11 +173,10 @@ model Usage {
   user   User   @relation(fields: [userId], references: [id])
 
   label String
-  count Int @default(0)
+  count Int    @default(0)
 
   updatedAt DateTime @updatedAt
 
   @@unique([userId, label])
-
   @@map("usages")
 }
